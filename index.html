@@ -1,36 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Github Actions</title>
     <style>
+      html {
+        font-size: 16;
+        background-image: url("images/stars_w_400.jpg");
+        background-size: cover;
+      }
+      img {
+        width: 35%;
+        height: auto;
+      }
+      .world {
+        text-align: center;
+      }
+      .world h1 {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 5rem;
+        color: #fff;
+        letter-spacing: 1.4;
+        text-transform: uppercase;
+        text-shadow: 0 0 1rem #fff;
+      }
+      @media (max-width: 400px) {
         html {
-            font-size: 16;
-            background-image: url(images/stars.jpg);
+          background-image: url("images/stars_w_400.jpg");
         }
-        img {
-            width: 35%;
-            height: auto;
+      }
+      @media (max-width: 1100px) {
+        html {
+          background-image: url("images/stars_w_1100.jpg");
         }
-        .world {
-            text-align: center;
+      }
+      @media (max-width: 1380px) {
+        html {
+          background-image: url("images/stars_w_1380.jpg");
         }
-        .world h1 {
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 5rem;
-            color: #fff;
-            letter-spacing: 1.4;
-            text-transform: uppercase;
-            text-shadow: 0 0 1rem #fff;
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="world">
-        <h1>Hello Github Actions</h1>
-        <img src="images/world.png" alt="world image">
+      <h1>Hello Github Actions</h1>
+      <img
+        sizes="(max-width: 1380px) 100vw, 1380px"
+        srcset="
+          images/world_w_400.png   400w,
+          images/world_w_1114.png 1114w,
+          images/world_w_1380.png 1380w
+        "
+        src="images/world_w_1380.png"
+        alt="world image"
+      />
     </div>
-</body>
+  </body>
 </html>
