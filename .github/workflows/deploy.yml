@@ -17,4 +17,4 @@ jobs:
       - name: setup surge
         run: npm install -g surge
       - name: deploy with surge
-        run: surge ./ --domain kashif-ghafoor-github-actions.surge.sh --token ${{ secrets.SURGE_TOKEN }}
+        run: surge ./ --domain kashif-ghafoor-github-actions.surge.sh --token ${{ secrets.SURGUE_TOEKEN }}
